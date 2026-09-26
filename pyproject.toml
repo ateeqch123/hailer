@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hailer"
+version = "0.1.0"
+description = "Notify one address when authorized Gmail accounts receive recruiter outreach or automatic replies."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [{ name = "ateeqch123", email = "272857377+ateeqch123@users.noreply.github.com" }]
+keywords = ["gmail", "oauth", "recruiting"]
+dependencies = [
+    "google-api-python-client",
+    "google-auth-oauthlib",
+    "google-auth-httplib2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+hailer = "hailer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ateeqch123/hailer"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

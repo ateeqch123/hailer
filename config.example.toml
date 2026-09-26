@@ -1,0 +1,12 @@
+# Copy to hailer.toml (or set HAILER_CONFIG) and edit. Do not commit hailer.toml
+# if the addresses are private.
+
+# Address that receives one email per new recruiter or autoreply hit.
+notify_to = "sam@example.com"
+
+# Authorized Gmail account that sends those alerts. Must appear in
+# `hailer auth list`. The account owner has to complete Google's consent screen.
+notify_from = "sam.watch@gmail.com"
+
+# How many accounts to poll at once. `hailer check --concurrency` overrides this.
+concurrency = 10
